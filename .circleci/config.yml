@@ -17,6 +17,11 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: Black Duck
+          command: |
+            curl -fLOsS https://detect.synopsys.com/detect7.sh
+            bash detect7.sh --blackduck.url=https://testing.blackduck.synopsys.com --blackduck.username=sysadmin --blackduck.password=e5@w3^C1?m2P?W    
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
